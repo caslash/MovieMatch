@@ -24,4 +24,3 @@ build/
 *.dat
 *.dep
 /MovieKit/SecureAPIKeys
-MovieKit/MovieKit/Secrets.swift
