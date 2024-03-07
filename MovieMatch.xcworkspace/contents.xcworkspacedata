@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MovieMatch/MovieMatch.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MovieKit/MovieKit.xcodeproj">
    </FileRef>
 </Workspace>
