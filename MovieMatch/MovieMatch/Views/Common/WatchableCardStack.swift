@@ -24,6 +24,8 @@ struct WatchableCardStack<Model>: View where Model: Watchable {
                             withAnimation(.spring()) {
                                 onRemove(watchable, isLiked)
                             }
+                        } backContent: {
+                            Text(watchable.title ?? "Untitled")
                         }
                         .frame(
                             width: cardWidth(in: proxy, index: index),

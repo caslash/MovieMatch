@@ -9,7 +9,7 @@ import MovieKit
 import SlashKit
 import SwiftUI
 
-struct WatchableCardView<Model>: View where Model: Watchable {
+struct WatchableCardView<Model, Content: View>: View where Model: Watchable {
     private enum Constants {
         static var swipThreshold: CGFloat { 0.25 }
     }
@@ -18,42 +18,77 @@ struct WatchableCardView<Model>: View where Model: Watchable {
         case like, dislike, none
     }
     
+    @State private var isFlipped = false
     @State private var translation: CGSize = .zero
     @State private var swipeStatus: SwipeStatus = .none
     
     private let watchable: Model
     private let onRemove: (_ watchable: Model, _ isLiked: Bool) -> Void
+    private let backContent: () -> Content
     
     var body: some View {
         GeometryReader { proxy in
             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original\(watchable.posterPath!)")) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .overlay {
-                        Color (
-                            swipeStatus == .like ? .green.withAlphaComponent(0.4) :
-                                (swipeStatus == .dislike ? .red.withAlphaComponent(0.4) : .clear)
-                        )
-                    }
-                    .overlay(
-                        alignment: swipeStatus == .like ? .topLeading : (swipeStatus == .dislike ? .topTrailing : .top)
-                    ) {
-                        Image(
-                            systemName: swipeStatus == .like ? "hand.thumbsup.circle" :
-                                (swipeStatus == .dislike ? "hand.thumbsdown.circle" : "hand.raised.circle")
-                        )
+                if !isFlipped {
+                    image
                         .resizable()
-                        .imageScale(.large)
-                        .frame(width: 32, height: 32)
-                        .foregroundColor(.primary)
-                        .padding(8)
+                        .scaledToFit()
+                        .overlay {
+                            Color (
+                                swipeStatus == .like ? .green.withAlphaComponent(0.4) :
+                                    (swipeStatus == .dislike ? .red.withAlphaComponent(0.4) : .clear)
+                            )
+                        }
+                        .overlay(
+                            alignment: swipeStatus == .like ? .topLeading : (swipeStatus == .dislike ? .topTrailing : .top)
+                        ) {
+                            Image(
+                                systemName: swipeStatus == .like ? "hand.thumbsup.circle" :
+                                    (swipeStatus == .dislike ? "hand.thumbsdown.circle" : "hand.raised.circle")
+                            )
+                            .resizable()
+                            .imageScale(.large)
+                            .frame(width: 32, height: 32)
+                            .foregroundColor(.primary)
+                            .padding(8)
+                            .background(.thinMaterial)
+                            .clipShape(Circle())
+                            .padding(8)
+                            .opacity(swipeStatus == .none ? 0.0 : 1.0)
+                        }
+                        .cornerRadius(10)
+                } else {
+                    backContent()
+                        .frame(width: 300, height: 450)
                         .background(.thinMaterial)
-                        .clipShape(Circle())
-                        .padding(8)
-                        .opacity(swipeStatus == .none ? 0.0 : 1.0)
-                    }
-                    .cornerRadius(10)
+                        .overlay {
+                            Color (
+                                swipeStatus == .like ? .green.withAlphaComponent(0.4) :
+                                    (swipeStatus == .dislike ? .red.withAlphaComponent(0.4) : .clear)
+                            )
+                        }
+                        .overlay(
+                            alignment: swipeStatus == .like ? .topLeading : (swipeStatus == .dislike ? .topTrailing : .top)
+                        ) {
+                            Image(
+                                systemName: swipeStatus == .like ? "hand.thumbsup.circle" :
+                                    (swipeStatus == .dislike ? "hand.thumbsdown.circle" : "hand.raised.circle")
+                            )
+                            .resizable()
+                            .imageScale(.large)
+                            .frame(width: 32, height: 32)
+                            .foregroundColor(.primary)
+                            .padding(8)
+                            .background(.thinMaterial)
+                            .clipShape(Circle())
+                            .padding(8)
+                            .opacity(swipeStatus == .none ? 0.0 : 1.0)
+                        }
+                        .cornerRadius(10)
+                        .rotation3DEffect(
+                            .degrees(180),
+                            axis: (x: 0.0, y: 1.0, z: 0.0))
+                }
             } placeholder: {
                 ProgressView()
             }
@@ -62,21 +97,32 @@ struct WatchableCardView<Model>: View where Model: Watchable {
                 alignment: .center
             )
             .clipped()
-            .offset(x: translation.width, y: 0)
+            .offset(x: translation.width * (isFlipped ? -1 : 1), y: 0)
             .rotationEffect(
-                .degrees(translation.width / proxy.size.width * 25.0),
+                .degrees(translation.width / proxy.size.width * 25.0 * (isFlipped ? -1 : 1)),
                 anchor: .bottom
             )
+            .rotation3DEffect(
+                .degrees(isFlipped ? 180 : 0),
+                axis: (x: 0.0, y: 1.0, z: 0.0)
+            )
             .gesture(dragGesture(on: proxy))
+            .onTapGesture {
+                withAnimation(.easeInOut(duration: 0.5)) {
+                    self.isFlipped.toggle()
+                }
+            }
         }
     }
     
     init(
         _ watchable: Model,
-        onRemove: @escaping (_ watchable: Model, _ isLiked: Bool) -> Void = { _, _ in }
+        onRemove: @escaping (_ watchable: Model, _ isLiked: Bool) -> Void = { _, _ in },
+        @ViewBuilder backContent: @escaping () -> Content
     ) {
         self.watchable = watchable
         self.onRemove = onRemove
+        self.backContent = backContent
     }
     
     private func gestureFraction(
@@ -125,11 +171,17 @@ struct WatchableCardView<Model>: View where Model: Watchable {
 }
 
 #Preview("Movie Card", traits: .sizeThatFitsLayout) {
-    WatchableCardView(Bundle.main.decode(Movie.self, from: "thedarkknight.json"))
+    WatchableCardView(Bundle.main.decode(Movie.self, from: "thedarkknight.json")) { _, _ in
+        print("Hello, World")
+    } backContent: {
+        Text("Movie")
+    }
         .frame(height: 450)
 }
 
 #Preview("TV Show Card", traits: .sizeThatFitsLayout) {
-    WatchableCardView(Bundle.main.decode(TVShow.self, from: "theoffice.json"))
+    WatchableCardView(Bundle.main.decode(TVShow.self, from: "theoffice.json")) {
+        Text("TV Show")
+    }
         .frame(height: 450)
 }
