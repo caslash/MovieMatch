@@ -1,0 +1,421 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/jbTqU6BJMufoMnPSlO4ThrcXs3Y.jpg",
+      "genre_ids": [
+        16,
+        35
+      ],
+      "id": 1434,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Family Guy",
+      "overview": "Sick, twisted, politically incorrect and Freakin' Sweet animated series featuring the adventures of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois have three kids. Stewie (a brilliant but sadistic baby bent on killing his mother and taking over the world), Meg (the oldest, and is the most unpopular girl in town) and Chris (the middle kid, he's not very bright but has a passion for movies). The final member of the family is Brian - a talking dog and much more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting through his own life issues.",
+      "popularity": 4808.506,
+      "poster_path": "/y0HUz4eUNUe3TeEd8fQWYazPaC7.jpg",
+      "first_air_date": "1999-01-31",
+      "name": "Family Guy",
+      "vote_average": 7.339,
+      "vote_count": 4226
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tuMZKK47l6l42lql9fC6PV6S06M.jpg",
+      "genre_ids": [
+        80,
+        18,
+        9648
+      ],
+      "id": 4057,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Criminal Minds",
+      "overview": "An elite team of FBI profilers analyze the country's most twisted criminal minds, anticipating their next moves before they strike again. The Behavioral Analysis Unit's most experienced agent is David Rossi, a founding member of the BAU who returns to help the team solve new cases.",
+      "popularity": 3861.829,
+      "poster_path": "/wLMQebhTApmn4F6Fzg6FovdwVvL.jpg",
+      "first_air_date": "2005-09-22",
+      "name": "Criminal Minds",
+      "vote_average": 8.318,
+      "vote_count": 3626
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vZePKXaSO3537aJTxifE3Rrwobb.jpg",
+      "genre_ids": [
+        80,
+        18,
+        9648
+      ],
+      "id": 1431,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "CSI: Crime Scene Investigation",
+      "overview": "A Las Vegas team of forensic investigators are trained to solve criminal cases by scouring the crime scene, collecting irrefutable evidence and finding the missing pieces that solve the mystery.",
+      "popularity": 3704.33,
+      "poster_path": "/i5hmoRjHNWady4AtAGICTUXknKH.jpg",
+      "first_air_date": "2000-10-06",
+      "name": "CSI: Crime Scene Investigation",
+      "vote_average": 7.62,
+      "vote_count": 1190
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/euuK8owCrdiz0HMj8iVhhquPhDv.jpg",
+      "genre_ids": [
+        80,
+        18,
+        10759
+      ],
+      "id": 4614,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "NCIS",
+      "overview": "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
+      "popularity": 3701.371,
+      "poster_path": "/2exOHePjOTquUsbThPGhuEjYTyA.jpg",
+      "first_air_date": "2003-09-23",
+      "name": "NCIS",
+      "vote_average": 7.628,
+      "vote_count": 2204
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/i8iqYtAy9qcO5RSrA1f6fY1n6SN.jpg",
+      "genre_ids": [
+        10766
+      ],
+      "id": 235484,
+      "origin_country": [
+        "ZA"
+      ],
+      "original_language": "af",
+      "original_name": "Suidooster",
+      "overview": "Suidooster is a South African television soap opera produced by Suidooster Films which revolves around a matriarch, her family, friends and the people of Suidooster, a small shopping and business centre in the fictional Cape Town suburb of Ruiterbosch.",
+      "popularity": 3505.788,
+      "poster_path": "/naCgSiacvV685kait6fBvhVhdce.jpg",
+      "first_air_date": "2015-11-16",
+      "name": "Suidooster",
+      "vote_average": 8.273,
+      "vote_count": 11
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7cqKGQMnNabzOpi7qaIgZvQ7NGV.jpg",
+      "genre_ids": [
+        10765,
+        10759
+      ],
+      "id": 76479,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Boys",
+      "overview": "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
+      "popularity": 3388.393,
+      "poster_path": "/2zmTngn1tYC1AvfnrFLhxeD82hz.jpg",
+      "first_air_date": "2019-07-25",
+      "name": "The Boys",
+      "vote_average": 8.471,
+      "vote_count": 9804
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/pxeqQX4qFQ0cVxPt5SWZENV5BH3.jpg",
+      "genre_ids": [
+        10751,
+        16,
+        35
+      ],
+      "id": 456,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Simpsons",
+      "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
+      "popularity": 3299.723,
+      "poster_path": "/vHqeLzYl3dEAutojCO26g0LIkom.jpg",
+      "first_air_date": "1989-12-17",
+      "name": "The Simpsons",
+      "vote_average": 8.014,
+      "vote_count": 9671
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tMRdEsMg9MyXAkcufK9YJEeIaNW.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 1400,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Seinfeld",
+      "overview": "A stand-up comedian and his three offbeat friends weather the pitfalls and payoffs of life in New York City in the '90s. It's a show about nothing.",
+      "popularity": 3145.23,
+      "poster_path": "/aCw8ONfyz3AhngVQa1E2Ss4KSUQ.jpg",
+      "first_air_date": "1989-07-05",
+      "name": "Seinfeld",
+      "vote_average": 8.282,
+      "vote_count": 1892
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mZCq3ldk7hUIyDvfZIOvTrxPWYS.jpg",
+      "genre_ids": [],
+      "id": 209374,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "es",
+      "original_name": "Top Chef VIP",
+      "overview": "",
+      "popularity": 2910.943,
+      "poster_path": "/cw6M4c2MpLSzqzmrrqpSJlEbwCF.jpg",
+      "first_air_date": "2022-08-09",
+      "name": "Top Chef VIP",
+      "vote_average": 5,
+      "vote_count": 7
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2Bkqjc9tNWo3KLr1aRYyJ7vMQtM.jpg",
+      "genre_ids": [
+        10764
+      ],
+      "id": 235493,
+      "origin_country": [
+        "NL"
+      ],
+      "original_language": "nl",
+      "original_name": "De Bondgenoten",
+      "overview": "",
+      "popularity": 2867.466,
+      "poster_path": "/wsipinibYxrZhpkQ6MKxIMgL0hv.jpg",
+      "first_air_date": "2023-10-22",
+      "name": "De Bondgenoten",
+      "vote_average": 6.875,
+      "vote_count": 16
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nVRyd8hlg0ZLxBn9RaI7mUMQLnz.jpg",
+      "genre_ids": [
+        18,
+        9648,
+        10765
+      ],
+      "id": 1622,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Supernatural",
+      "overview": "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
+      "popularity": 2767.045,
+      "poster_path": "/KoYWXbnYuS3b0GyQPkbuexlVK9.jpg",
+      "first_air_date": "2005-09-13",
+      "name": "Supernatural",
+      "vote_average": 8.295,
+      "vote_count": 7370
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3d0tKO9eUC0aLB4u3LnbKlCcy8y.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 44006,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Chicago Fire",
+      "overview": "An edge-of-your-seat view into the lives of everyday heroes committed to one of America's noblest professions. For the firefighters, rescue squad and paramedics of Chicago Firehouse 51, no occupation is more stressful or dangerous, yet so rewarding and exhilarating. These courageous men and women are among the elite who forge headfirst into danger when everyone else is running the other way and whose actions make the difference between life and death.",
+      "popularity": 2736.988,
+      "poster_path": "/2yaeYNplMuLGNjBigMFsek7UZmq.jpg",
+      "first_air_date": "2012-10-10",
+      "name": "Chicago Fire",
+      "vote_average": 8.406,
+      "vote_count": 2145
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/An4A7olcIIAgnYNJWgmugCa97er.jpg",
+      "genre_ids": [
+        10764
+      ],
+      "id": 17380,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Real Housewives of Atlanta",
+      "overview": "Bravo's cameras turn to the Southern states as the network presents this inside look at the Real Housewives of Atlanta. These women handle the personal dramas that affect their affluent lifestyles with a signature Southern brand of “style” and “grace.”",
+      "popularity": 2735.764,
+      "poster_path": "/h5HYOsyc1sJQYjqevaWEaLRjd6E.jpg",
+      "first_air_date": "2008-10-07",
+      "name": "The Real Housewives of Atlanta",
+      "vote_average": 6.058,
+      "vote_count": 113
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/edsotmSdhkWZazcljC1K2Lrkg5Y.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 37680,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Suits",
+      "overview": "While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory.",
+      "popularity": 2681.238,
+      "poster_path": "/vQiryp6LioFxQThywxbC6TuoDjy.jpg",
+      "first_air_date": "2011-06-23",
+      "name": "Suits",
+      "vote_average": 8.222,
+      "vote_count": 4907
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3ZzSaTwUC7wNd9CNTDQ76eP6guG.jpg",
+      "genre_ids": [
+        10764
+      ],
+      "id": 10222,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Real Housewives of Orange County",
+      "overview": "A view into the lives of several women and their families who live in one of the wealthiest communities in the country with the viewer taken \"inside the gates\" to show their lives aren't always perfect.",
+      "popularity": 2674.135,
+      "poster_path": "/mEg3ohdBkLOs0L1GmYGtiwyJXlE.jpg",
+      "first_air_date": "2006-03-21",
+      "name": "The Real Housewives of Orange County",
+      "vote_average": 5.5,
+      "vote_count": 58
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qV9o0RIBCRKyqLDLZAihskR23Gx.jpg",
+      "genre_ids": [
+        80,
+        18
+      ],
+      "id": 58841,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Chicago P.D.",
+      "overview": "A riveting police drama about the men and women of the Chicago Police Department's District 21 who put it all on the line to serve and protect their community. District 21 is made up of two distinctly different groups: the uniformed cops who patrol the beat and go head-to-head with the city's street crimes and the Intelligence Unit that combats the city's major offenses - organized crime, drug trafficking, high profile murders and beyond.",
+      "popularity": 2619.238,
+      "poster_path": "/mZObarMPF76PGVmwywQ7Ks4UFpR.jpg",
+      "first_air_date": "2014-01-08",
+      "name": "Chicago P.D.",
+      "vote_average": 8.423,
+      "vote_count": 2328
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aA7628zqsHEKTqBGiYjzLDYzSUU.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 3365,
+      "origin_country": [
+        "GB"
+      ],
+      "original_language": "en",
+      "original_name": "Grange Hill",
+      "overview": "Children's drama series following the lives of students and teachers at Grange Hill comprehensive school.",
+      "popularity": 2591.011,
+      "poster_path": "/8SziJYek4dEumfweUY9GnnOtcJS.jpg",
+      "first_air_date": "1978-02-08",
+      "name": "Grange Hill",
+      "vote_average": 6.5,
+      "vote_count": 22
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jLCuqeDkoSOmnyOoAm4PbiqoUV6.jpg",
+      "genre_ids": [
+        80,
+        18
+      ],
+      "id": 549,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Law & Order",
+      "overview": "In cases ripped from the headlines, police investigate serious and often deadly crimes, weighing the evidence and questioning the suspects until someone is taken into custody. The district attorney's office then builds a case to convict the perpetrator by proving the person guilty beyond a reasonable doubt. Working together, these expert teams navigate all sides of the complex criminal justice system to make New York a safer place.",
+      "popularity": 2466.395,
+      "poster_path": "/m9zTQr4TYS98UFSiA1k0mMfECPe.jpg",
+      "first_air_date": "1990-09-13",
+      "name": "Law & Order",
+      "vote_average": 7.351,
+      "vote_count": 556
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8jjTPo8j2dG6eDBYZOxgEpzSGAB.jpg",
+      "genre_ids": [
+        10765,
+        18,
+        10759
+      ],
+      "id": 94997,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "House of the Dragon",
+      "overview": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+      "popularity": 2455.888,
+      "poster_path": "/t9XkeE7HzOsdQcDDDapDYh8Rrmt.jpg",
+      "first_air_date": "2022-08-21",
+      "name": "House of the Dragon",
+      "vote_average": 8.4,
+      "vote_count": 4274
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/u98PeujOJCXCowph9mxRzo9Nw1s.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 4546,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "Curb Your Enthusiasm",
+      "overview": "The off-kilter, unscripted comic vision of Larry David, who plays himself in a parallel universe in which he can't seem to do anything right, and, by his standards, neither can anyone else.",
+      "popularity": 2381.873,
+      "poster_path": "/mZqWmSq1M61Jlre3furVDSXvdrN.jpg",
+      "first_air_date": "2000-10-15",
+      "name": "Curb Your Enthusiasm",
+      "vote_average": 8,
+      "vote_count": 711
+    }
+  ],
+  "total_pages": 8778,
+  "total_results": 175560
+}
