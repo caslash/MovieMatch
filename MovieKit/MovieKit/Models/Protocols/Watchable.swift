@@ -10,6 +10,7 @@ import Foundation
 public protocol Watchable: Identifiable, Decodable, Equatable {
     var id: Int { get }
     var title: String? { get }
-    var releaseDate: String? { get }
+    var releaseDate: Date? { get }
     var posterPath: String? { get }
+    var overview: String? { get }
 }

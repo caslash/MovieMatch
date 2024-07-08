@@ -9,7 +9,7 @@ import MovieKit
 import SlashKit
 import SwiftUI
 
-struct WatchableCardView<Model, Content: View>: View where Model: Watchable {
+struct WatchableCardView<Model>: View where Model: Watchable {
     private enum Constants {
         static var swipThreshold: CGFloat { 0.25 }
     }
@@ -24,7 +24,6 @@ struct WatchableCardView<Model, Content: View>: View where Model: Watchable {
     
     private let watchable: Model
     private let onRemove: (_ watchable: Model, _ isLiked: Bool) -> Void
-    private let backContent: () -> Content
     
     var body: some View {
         GeometryReader { proxy in
@@ -58,7 +57,19 @@ struct WatchableCardView<Model, Content: View>: View where Model: Watchable {
                         }
                         .cornerRadius(10)
                 } else {
-                    backContent()
+                    VStack(spacing: 5) {
+                        Text(watchable.title ?? "Untitled")
+                            .multilineTextAlignment(.center)
+                            .font(.title2.weight(.heavy))
+                            .italic()
+                        
+                        Text(watchable.releaseDate?.formatted(Date.FormatStyle().year()) ?? "No Release Year")
+                            .font(.subheadline)
+                        
+                        Text(watchable.overview ?? "No Overview")
+                            .multilineTextAlignment(.center)
+                    }
+                        .padding()
                         .frame(width: 300, height: 450)
                         .background(.thinMaterial)
                         .overlay {
@@ -117,12 +128,10 @@ struct WatchableCardView<Model, Content: View>: View where Model: Watchable {
     
     init(
         _ watchable: Model,
-        onRemove: @escaping (_ watchable: Model, _ isLiked: Bool) -> Void = { _, _ in },
-        @ViewBuilder backContent: @escaping () -> Content
+        onRemove: @escaping (_ watchable: Model, _ isLiked: Bool) -> Void = { _, _ in }
     ) {
         self.watchable = watchable
         self.onRemove = onRemove
-        self.backContent = backContent
     }
     
     private func gestureFraction(
@@ -173,15 +182,13 @@ struct WatchableCardView<Model, Content: View>: View where Model: Watchable {
 #Preview("Movie Card", traits: .sizeThatFitsLayout) {
     WatchableCardView(Bundle.main.decode(Movie.self, from: "thedarkknight.json")) { _, _ in
         print("Hello, World")
-    } backContent: {
-        Text("Movie")
     }
         .frame(height: 450)
 }
 
 #Preview("TV Show Card", traits: .sizeThatFitsLayout) {
-    WatchableCardView(Bundle.main.decode(TVShow.self, from: "theoffice.json")) {
-        Text("TV Show")
+    WatchableCardView(Bundle.main.decode(TVShow.self, from: "theoffice.json")) { _, _ in
+        print("Hello, World")
     }
         .frame(height: 450)
 }

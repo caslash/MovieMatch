@@ -17,7 +17,7 @@ public struct Movie: Watchable {
     public var overview         : String? = nil
     public var popularity       : Double? = nil
     public var posterPath       : String? = nil
-    public var releaseDate      : String? = nil
+    public var releaseDate      : Date?   = nil
     public var title            : String? = nil
     public var video            : Bool?   = nil
     public var voteAverage      : Double? = nil
@@ -43,21 +43,28 @@ extension Movie: Decodable {
     }
 
     public init(from decoder: Decoder) throws {
-      let values = try decoder.container(keyedBy: CodingKeys.self)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.id               = try values.decode(Int.self, forKey: .id)
+        self.adult            = try values.decodeIfPresent(Bool.self   , forKey: .adult            )
+        self.backdropPath     = try values.decodeIfPresent(String.self , forKey: .backdropPath     )
+        self.genreIds         = try values.decodeIfPresent([Int].self  , forKey: .genreIds         )
+        self.originalLanguage = try values.decodeIfPresent(String.self , forKey: .originalLanguage )
+        self.originalTitle    = try values.decodeIfPresent(String.self , forKey: .originalTitle    )
+        self.overview         = try values.decodeIfPresent(String.self , forKey: .overview         )
+        self.popularity       = try values.decodeIfPresent(Double.self , forKey: .popularity       )
+        self.posterPath       = try values.decodeIfPresent(String.self , forKey: .posterPath       )
+        self.title            = try values.decodeIfPresent(String.self , forKey: .title            )
+        self.video            = try values.decodeIfPresent(Bool.self   , forKey: .video            )
+        self.voteAverage      = try values.decodeIfPresent(Double.self , forKey: .voteAverage      )
+        self.voteCount        = try values.decodeIfPresent(Int.self    , forKey: .voteCount        )
         
-      self.id               = try values.decode(Int.self, forKey: .id)
-      self.adult            = try values.decodeIfPresent(Bool.self   , forKey: .adult            )
-      self.backdropPath     = try values.decodeIfPresent(String.self , forKey: .backdropPath     )
-      self.genreIds         = try values.decodeIfPresent([Int].self  , forKey: .genreIds         )
-      self.originalLanguage = try values.decodeIfPresent(String.self , forKey: .originalLanguage )
-      self.originalTitle    = try values.decodeIfPresent(String.self , forKey: .originalTitle    )
-      self.overview         = try values.decodeIfPresent(String.self , forKey: .overview         )
-      self.popularity       = try values.decodeIfPresent(Double.self , forKey: .popularity       )
-      self.posterPath       = try values.decodeIfPresent(String.self , forKey: .posterPath       )
-      self.releaseDate      = try values.decodeIfPresent(String.self , forKey: .releaseDate      )
-      self.title            = try values.decodeIfPresent(String.self , forKey: .title            )
-      self.video            = try values.decodeIfPresent(Bool.self   , forKey: .video            )
-      self.voteAverage      = try values.decodeIfPresent(Double.self , forKey: .voteAverage      )
-      self.voteCount        = try values.decodeIfPresent(Int.self    , forKey: .voteCount        )
+        let dateString = try values.decodeIfPresent(String.self, forKey: .releaseDate)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY-MM-DD"
+        
+        if let date = formatter.date(from: dateString ?? "") {
+            self.releaseDate = date
+        }
     }
 }

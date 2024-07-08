@@ -24,8 +24,6 @@ struct WatchableCardStack<Model>: View where Model: Watchable {
                             withAnimation(.spring()) {
                                 onRemove(watchable, isLiked)
                             }
-                        } backContent: {
-                            Text(watchable.title ?? "Untitled")
                         }
                         .frame(
                             width: cardWidth(in: proxy, index: index),
@@ -76,13 +74,9 @@ private enum Constants {
 }
 
 #Preview("Movies Stack") {
-    WatchableCardStack(watchables: Bundle.main.decode(MoviesResponse.self, from: "moviesresponse.json").results) { movie, isLiked in
-        
-    }
+    WatchableCardStack(watchables: Bundle.main.decode(MoviesResponse.self, from: "moviesresponse.json").results) { _, _ in }
 }
 
 #Preview("TV Stack") {
-    WatchableCardStack(watchables: Bundle.main.decode(TVShowsResponse.self, from: "tvshowresponse.json").results) { show, isLiked in
-        
-    }
+    WatchableCardStack(watchables: Bundle.main.decode(TVShowsResponse.self, from: "tvshowresponse.json").results) { _, _ in }
 }
